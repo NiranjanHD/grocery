@@ -1,0 +1,89 @@
+drop database grocery;
+
+create database grocery;
+				
+use grocery;
+
+create table items(category varchar(50),grainname varchar(50),qty varchar(50),amt varchar(40),id varchar(20),id1 varchar(20),avail varchar(90),id2 varchar(20));
+
+create table avo(qty varchar(90),amt varchar(90));
+
+create table sgnup(cid varchar(50),fname varchar(15),sname varchar(15),uname varchar(15),pwd varchar(10),email varchar(20),text6 varchar(90),gender varchar(90),adr varchar(20),mno varchar(50) not null,altph varchar(50) not null,flag varchar(50),primary key(cid,uname));
+
+create table emp(eid varchar(50),efname varchar(15),esname varchar(15),euname varchar(15),epwd varchar(10),eemail varchar(20),text7 varchar(90),egender varchar(90),eadr varchar(20),emno varchar(50) not null,ealtph varchar(50) not null,flag varchar(50),primary key(eid,euname));
+
+create table sgnup1(cid varchar(50),fname varchar(15),sname varchar(15),uname varchar(15),pwd varchar(10),email varchar(20),text6 varchar(90),gender varchar(90),adr varchar(20),mno int(50),altph int(50),flag varchar(50),primary key(cid,uname));
+
+
+create table password(passwd varchar(300) primary key,flag varchar(500),uname varchar(50),utype varchar(50));
+
+create table feedback(slno varchar(50),name varchar(50),subject varchar(50),message varchar(50),email varchar(50),phone varchar(50),date varchar(50));
+
+create table cart(name varchar(50),qty varchar(10),oamt varchar(50),qamt varchar(50),id varchar(50));
+
+create table purchase(billno varchar(90),uid varchar(90),uname varchar(20),address varchar(90),mop varchar(90),pname varchar(90),pqty varchar(90),oamt varchar(90),qamt varchar(90),flag varchar(90));
+
+insert into password values('admin','0','admin','admin');
+
+insert into password values('emp','0','emp','employee');
+
+insert into password values('niranjan','0','niranjan','customer');
+
+insert into sgnup values('CUST1000','lll','eee','niranjan','niranjan','email','2012-12-12','male','dd','999999999','999999999','0');
+
+insert into emp values('EMP1000','lll','eee','emp','emp','email','2012-12-12','male','dd','999999999','999999999','0');
+
++--------+------+---------+----------+
+| passwd | flag | uname   | utype    |
++--------+------+---------+----------+
+| 123    | 0    | harish  | admin    |
+| 1234   | 0    | nayan   | employee |
+| 12345  | 0    | niru    | customer |
+| abcd   | 0    | abcd    | customer |
+| bb     | 0    | bb      | customer |
+| deep   | 0    | deep    | customer |
+| gg     | 0    | gg      | customer |
+| hari   | 0    | hari    | customer |
+| hh     | 0    | hh      | customer |
+| lop    | 0    | lalitha | customer |
+| nn     | 0    | nn      | customer |
+| oo     | 0    | gd      | customer |
+| reddy  | 0    | hari    | customer |
+| sure   | 0    | sure    | customer |
++--------+------+---------+----------+
+
+============================================================================================================================================
+
+insert into items values('Grains','Aachi Diarice','3','67','gg','gg','');
+insert into items values('Grains','Basmathi Rice','3','67','','','');
+insert into items values('Grains','Double Deer Basmathi Rice','3','67','','','');
+insert into items values('Grains','Double Deer Jeeraga Samba Rice','3','67','','','');
+insert into items values('Grains','Idly Rice','3','67','','','');
+insert into items values('Grains','Karnataka Ponni Rice','3','67','','','');
+insert into items values('Grains','Lal Quilla Basmathi Rice','3','67','','','');
+insert into items values('Grains','New Raw Rice','3','67','','','');
+insert into items values('Grains','Ponni Boiled Rice (Pulungal arisi) Grade1','3','67','','','');
+insert into items values('Grains','Ponni Boiled Rice (Pulungal arisi) GradeII','3','67','','','');
+insert into items values('Grains','Ponni Raw Rice (Pachchai arisi) Grade II','3','67','','','');
+insert into items values('Grains','Ponni Raw Rice (Pachchai arisi) Grade1','3','67','','','');
+insert into items values('Grains','Seeraga Samba Rice','3','67','','','');
+
+============================================================================================================================================
+
+insert into items values('Oil','orrrr','3','67','gg','gg','');
+insert into items values('Oil','otttt','3','67','','','');
+insert into items values('Oil','ogggg','3','67','','','');
+insert into items values('Oil','offff','3','67','','','');
+insert into items values('Oil','oeeee','3','67','','','');
+insert into items values('Oil','obbbb','3','67','','','');
+insert into items values('Oil','obbbb','3','67','','','');
+insert into items values('Oil','onnnn','3','67','','','');
+
+insert into items values('Spices','orrrr','3','67','gg','gg','');
+insert into items values('Spices','otttt','3','67','','','');
+insert into items values('Spices','ogggg','3','67','','','');
+insert into items values('Spices','offff','3','67','','','');
+insert into items values('Spices','oeeee','3','67','','','');
+insert into items values('Spices','obbbb','3','67','','','');
+insert into items values('Spices','obbbb','3','67','','','');
+insert into items values('Spices','onnnn','3','67','','','');
